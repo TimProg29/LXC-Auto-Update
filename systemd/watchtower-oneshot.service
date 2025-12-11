@@ -5,12 +5,7 @@ Requires=docker.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/docker run --rm \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    containrrr/watchtower:latest \
-    --run-once \
-    --cleanup \
-    --debug
+ExecStart=/usr/local/sbin/run-watchtower.sh
 TimeoutStartSec=300
 
 [Install]

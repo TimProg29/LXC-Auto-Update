@@ -47,6 +47,10 @@ echo "[2/6] Installing update script..."
 cp "$SCRIPT_DIR/scripts/system-and-docker-update.sh" /usr/local/sbin/
 chmod +x /usr/local/sbin/system-and-docker-update.sh
 
+echo "[2.5/6] Installing Watchtower runner script..."
+cp "$SCRIPT_DIR/scripts/run-watchtower.sh" /usr/local/sbin/
+chmod +x /usr/local/sbin/run-watchtower.sh
+
 echo "[3/6] Installing update-on-boot service and enabling it..."
 cp "$SCRIPT_DIR/systemd/update-on-boot.service" /etc/systemd/system/
 systemctl daemon-reload
